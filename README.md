@@ -23,3 +23,6 @@ When I turn the wheelbase to sleep mode, as a few seconds, the moza pit house sh
 I donnot have the i2c contents sent by wheelbase, as I can recall, when it is in sleep mode, there are only 2 kinds of messages, `0xFC` and `0xDD`, base on MikeSzklarz's work, this is an asking of wheen type and button status. I replied `0x04` and `0x00` seperately. Sometimes there are some `0xED` and I did not reply. There is almost an reply asking from the master for every message.
 
 When I turn to work mode, there are regular `0xFC`, `0xF9` messages sent to the slave, but there is no slave reply signal, maybe after 4 or 5 messages, a master reply request. I try to replay all messages `0x04`, because I want to just emulate it as ES Wheel. But no responding at all. After a few times receiving, the messages change to `0xFF` and other things.
+
+## 4.Furthermore
+The reason I want to do this is because MOZA's steering wheel is very pricy. Far away from my paygrade. And another reason is, I saw FSR wheel has ABS info settings, which means if I emulate an FSR wheel, I can have ABS working info, I also can send this value to my DIY active brake paddles. The FOC for motor control is another project I am working on, this motor could be the active force for the brake paddle.
