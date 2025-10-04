@@ -12,7 +12,7 @@ I am using esp32s3 wroom 1 as the controller, pin 40 as SCL and pin 39 as SDA. A
 ### 2.2 Software
 As you can see in the list, the main code is i2c_basic_example_main.c. This code was build in ESP-IDF v5.5.
 
-I may not completely understand MikeSzklarz's code(poor at C++), the main idea of this program is: Firstly, initial i2c slave, `0x09` as slave address, and other settings. Secondly, set 2 callbacks('request' and 'receive') and pass the parameters to RTOS, in these 2 callbacks, when it is 'receive', I read the value and set a flag, when it is 'request', I reply the message to i2c master as the flag shows. Lastly, the rtos procedure is just print the value.
+I may not completely understand MikeSzklarz's code(poor at C++), the main idea of my program is: Firstly, initial i2c slave, `0x09` as slave address, and other settings. Secondly, set 2 callbacks('request' and 'receive') and pass the parameters to RTOS, in these 2 callbacks, when it is 'receive', I read the value and set a flag, when it is 'request', I reply the message to i2c master as the flag shows. Lastly, the rtos procedure is just print the value.
 
 Right now I just want to emulate the esp32s3 as an ES wheel, no button input yet.
 
