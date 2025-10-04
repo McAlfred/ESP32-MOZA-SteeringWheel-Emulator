@@ -8,7 +8,7 @@ I have **not** complete this project yet, today is Oct 4 2025. This program now 
 ## 2.About the hardware and software
 ### 2.1 Hardware
 I am using esp32s3 wroom 1 as the controller, pin 40 as SCL and pin 39 as SDA. And using tape to stick the cables on the wheelbase (I know this is unstable but it just works for now.)
-[hardware.jpg](/hardware.jpg)
+![hardware.jpg](/assets/images/hardware.jpg)
 
 
 ### 2.2 Software
