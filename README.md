@@ -8,7 +8,7 @@ I have **not** complete this project yet, today is Oct 4 2025. This program now 
 ## 2.About the hardware and software
 ### 2.1 Hardware
 I am using esp32s3 wroom 1 as the controller, pin 40 as SCL and pin 39 as SDA. And using tape to stick the cables on the wheelbase (I know this is unstable but it just works for now.) as shown below.
-![hardware.jpg](/assets/images/hardware.jpg)
+![hardware.jpg](/hardware.jpg)
 ### 2.2 Software
 As you can see in the list, the main code is i2c_basic_example_main.c. This code was build in ESP-IDF v5.5.
 
@@ -18,7 +18,7 @@ Right now I just want to emulate the esp32s3 as an ES wheel, no button input yet
 
 ## 3.Problems
 When I turn the wheelbase to sleep mode, as a few seconds, the moza pit house shows that the es wheel connected. When I turn the wheelbase to work mode, everything disappear. 
-![MOZA PIT HOUSE.png](/assets/images/MOZA_PIT_HOUSE.png)
+![MOZA PIT HOUSE.png](/MOZA_PIT_HOUSE.png)
 
 I donnot have the i2c contents sent by wheelbase, as I can recall, when it is in sleep mode, there are only 2 kinds of messages, `0xFC` and `0xDD`, base on MikeSzklarz's work, this is an asking of wheen type and button status. I replied `0x04` and `0x00` seperately. Sometimes there are some `0xED` and I did not reply. There is almost an reply asking from the master for every message.
 
